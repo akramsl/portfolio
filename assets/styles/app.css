@@ -1,3 +1,34 @@
+/* assets/styles/app.css */
+@import '~bootstrap/dist/css/bootstrap.min.css';
+
+/* Vos styles personnalisés ici */
 body {
-    background-color: skyblue;
+    background-color: #1a202c;
+    color: white;
 }
+
+@keyframes float {
+    0% { transform: translateY(0px) rotate(0deg); }
+    50% { transform: translateY(-20px) rotate(180deg); }
+    100% { transform: translateY(0px) rotate(360deg); }
+}
+
+.particles-container {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    pointer-events: none;
+}
+
+.particle {
+    position: absolute;
+    width: 6px;
+    height: 6px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    animation: float 15s infinite;
+}
+
+/* Générez 20 particules avec des positions et délais aléatoires */
+
